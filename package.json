@@ -1,0 +1,28 @@
+{
+  "name": "Roman",
+  "version": "1.0.0",
+  "description": "e2e tests",
+  "scripts": {
+    "test": "nightwatch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joannagalewska/Roman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joannagalewska/Roman/issues"
+  },
+  "homepage": "https://github.com/joannagalewska/Roman#readme",
+  "devDependencies": {
+    "chromedriver": "^2.41.0",
+    "cucumber": "^4.2.1",
+    "cucumber-html-reporter": "^4.0.3",
+    "geckodriver": "^1.12.1",
+    "nightwatch": "^0.9.21",
+    "nightwatch-cucumber": "^9.1.2",
+    "selenium-server": "^3.14.0"
+  }
+}
