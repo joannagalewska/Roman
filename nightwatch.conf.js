@@ -4,11 +4,11 @@ const chromedriver = require('chromedriver');
 const geckodriver = require('geckodriver');
 
 module.exports = {
-  "src_folders": [""],
-  "output_folder": "./reports",
-  "custom_commands_path": "./commands",
+  "src_folders": ["tests"],
+  "output_folder": "reports",
+  "custom_commands_path": "",
   "custom_assertions_path": "",
-  "page_objects_path": "./pages",
+  "page_objects_path": "page-objects",
   "globals_path": "./data/globals.js",
   "selenium": {
     "start_process": true,
@@ -22,7 +22,7 @@ module.exports = {
   },
   "test_settings": {
     "default": {
-      "launch_url": "http://localhost",
+      "launch_url": "https://app.getroman.com/",
       "selenium_port": 4444,
       "selenium_host": "localhost",
       "silent": true,
