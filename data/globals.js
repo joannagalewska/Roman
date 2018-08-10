@@ -1,3 +1,3 @@
 module.exports = {
-  waitTime: 1000000
+  waitTime: 100000
 };
