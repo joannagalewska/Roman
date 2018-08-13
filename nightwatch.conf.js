@@ -1,13 +1,19 @@
-const cucumber = require('nightwatch-cucumber');
 const seleniumServer = require('selenium-server');
 const chromedriver = require('chromedriver');
 const geckodriver = require('geckodriver');
+const nightwatchCucumber = require('nightwatch-cucumber');
+
+nightwatchCucumber({
+  cucumberArgs: [
+    '--require', './step_definitions/onboard.js',
+    '--format', 'node_modules/cucumber-pretty',
+    '--format', 'json:./reports/cucumber.json',
+    './features',
+  ]
+});
 
 module.exports = {
-  "src_folders": ["tests"],
   "output_folder": "reports",
-  "custom_commands_path": "",
-  "custom_assertions_path": "",
   "page_objects_path": "page-objects",
   "globals_path": "./data/globals.js",
   "selenium": {

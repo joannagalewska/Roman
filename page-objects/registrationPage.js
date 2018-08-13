@@ -8,7 +8,7 @@ let registrationCommands = {
       .click('@getStartedButton');
 
     return this;
-  }
+  },
 };
 
 module.exports = {

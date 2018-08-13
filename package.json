@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "e2e tests",
   "scripts": {
-    "tests": "nightwatch",
-    "report": "nightwatch-html-reporter -d reports -t default -o ../report.html -u true -l 3"
+    "test": "nightwatch"
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,7 @@
     "chromedriver": "^2.41.0",
     "cucumber": "^4.2.1",
     "cucumber-html-reporter": "^4.0.3",
+    "cucumber-pretty": "^1.4.4",
     "geckodriver": "^1.12.1",
     "nightwatch": "^0.9.21",
     "nightwatch-cucumber": "^9.1.2",

@@ -1,18 +1,6 @@
 let questions = require('../data/questions.json');
 
 let textFieldCommands = {
-  verifyQuestionText: function(qid){
-    let question = questions[qid];
-    let questionXPath = `//div[@class='flow-question-header-title'][text()="` + question + `"]`;
-
-    this
-      .api.useXpath()
-      .waitForElementPresent(questionXPath, this.api.globals.waitTime)
-      .expect.element(questionXPath).text.to.contain(question);
-
-    return this;
-  },
-
   fillZipCode: function(code) {
     this
       .waitForElementPresent('@zipCodeField', this.api.globals.waitTime)
@@ -35,6 +23,18 @@ let textFieldCommands = {
       .setValue('@standardField', email)
       .waitForElementPresent('@continueButton', this.api.globals.waitTime)
       .click('@continueButton');
+
+    return this;
+  },
+
+  verifyQuestionText: function(qid){
+    let question = questions[qid];
+    let questionXPath = `//div[@class='flow-question-header-title'][text()="` + question + `"]`;
+
+    this
+      .api.useXpath()
+      .waitForElementPresent(questionXPath, this.api.globals.waitTime)
+      .expect.element(questionXPath).text.to.contain(question);
 
     return this;
   }
