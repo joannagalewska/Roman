@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "e2e tests",
   "scripts": {
-    "test": "./node_modules/.bin/nightwatch -- features"
+    "tests": "./node_modules/.bin/nightwatch -- features"
   },
   "repository": {
     "type": "git",
