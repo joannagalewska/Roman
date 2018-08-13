@@ -1,15 +1,18 @@
 const seleniumServer = require('selenium-server');
 const chromedriver = require('chromedriver');
 const geckodriver = require('geckodriver');
-const nightwatchCucumber = require('nightwatch-cucumber');
+require("babel-core/register");
+require("babel-polyfill");
 
-nightwatchCucumber({
+require('nightwatch-cucumber')({
   cucumberArgs: [
-    '--require', './step_definitions/onboard.js',
+    '--compiler', 'js:babel-core/register',
+    '--require', 'step-definitions',
+    '--format', 'json:reports/json/cucumber.json',
     '--format', 'node_modules/cucumber-pretty',
-    '--format', 'json:./reports/cucumber.json',
-    './features',
-  ]
+    'features'
+  ],
+  nightwatchOutput: false
 });
 
 module.exports = {

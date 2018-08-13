@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "e2e tests",
   "scripts": {
-    "test": "nightwatch"
+    "test": "./node_modules/.bin/nightwatch -- features"
   },
   "repository": {
     "type": "git",
@@ -17,12 +17,19 @@
   },
   "homepage": "https://github.com/joannagalewska/Roman#readme",
   "devDependencies": {
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2017-native-modules": "0.0.2",
+    "babel-preset-es2017-node7": "^0.5.2",
+    "babel-register": "^6.26.0",
     "chromedriver": "^2.41.0",
-    "cucumber": "^4.2.1",
+    "cucumber": "^4.0.0",
     "cucumber-html-reporter": "^4.0.3",
     "cucumber-pretty": "^1.4.4",
     "geckodriver": "^1.12.1",
-    "nightwatch": "^0.9.21",
+    "nightwatch": "^0.9.20",
     "nightwatch-cucumber": "^9.1.2",
     "nightwatch-html-reporter": "^2.0.5",
     "selenium-server": "^3.14.0"
